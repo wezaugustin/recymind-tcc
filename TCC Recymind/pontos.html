@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pontos de coleta – recymind</title>
+  <meta name="description" content="Pontos de coleta próximos com endereço, horários e agendamento de visita." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/pontos.css" />
+  <script src="js/tema.js"></script>
+  <script src="js/sessao.js"></script>
+  <link rel="stylesheet" href="css/visual-refresh.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="inner">
+      <a class="brand" href="index.html"><span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-4 16-9 16z"/><path d="M4 21c4-6 8-8 12-9"/></svg></span> recymind</a>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="pontos.html">Pontos de coleta</a>
+        <button class="icon-btn" type="button" data-tema-toggle aria-label="Alternar tema"></button>
+        <a href="login.html" class="btn btn-outline">Entrar</a>
+        <a href="cadastro.html" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Pontos de coleta <span class="text-green">próximos</span></h1>
+      <p class="section-subtitle">Clique em um ponto para ver os detalhes, escolher a data disponível e agendar sua visita.</p>
+      <div class="my-bookings" id="meus-agendamentos" aria-labelledby="titulo-agendamentos">
+        <div class="bookings-heading">
+          <div>
+            <h2 id="titulo-agendamentos">Meus agendamentos</h2>
+            <p>Seus horários confirmados ficam salvos neste navegador.</p>
+          </div>
+          <span class="booking-count" id="total-agendamentos">0 visitas</span>
+        </div>
+        <div class="bookings-list" id="lista-agendamentos" aria-live="polite"></div>
+      </div>
+      <div class="point-tools">
+        <label class="filter-search"><span aria-hidden="true">⌕</span><input id="filtro-pontos-texto" type="search" placeholder="Buscar por nome, endereço ou material" aria-label="Buscar pontos de coleta"></label>
+        <label class="filter-select"><span class="sr-only">Filtrar por material</span><select id="filtro-material"><option value="">Todos os materiais</option><option>Recicláveis</option><option>Eletrônicos</option><option>Pilhas</option><option>Óleo</option><option>Orgânicos</option><option>Remédios</option><option>Perigosos</option><option>Volumosos</option><option>Pneus</option></select></label>
+      </div>
+      <div class="points-layout">
+        <div class="pontos" id="lista-pontos"></div>
+        <aside class="map-panel" aria-label="Mapa ilustrativo dos pontos de coleta"><div class="map-top"><div><strong>Mapa de coleta</strong><p>Veja os locais disponíveis na lista.</p></div><span class="map-live">● Locais</span></div><div class="map-art" role="img" aria-label="Prévia ilustrativa de mapa com pontos de coleta"><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div><div class="map-park park-a"></div><div class="map-park park-b"></div><span class="map-pin pin-a">⌖</span><span class="map-pin pin-b">⌖</span><span class="map-pin pin-c">⌖</span><span class="map-pin pin-d">⌖</span><div class="map-note">♻ Pontos de coleta</div></div><p class="map-disclaimer">Mapa demonstrativo; integração com localização real pode ser adicionada depois.</p></aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container inner">
+      <div class="fbrand"><span class="mark">♻</span> recymind</div>
+      <p>© 2026 recymind — Guia de descarte consciente para cidadãos.</p>
+    </div>
+  </footer>
+
+  <div class="toast-wrap"></div>
+  <script src="js/aviso.js"></script>
+  <script src="js/pontos.js"></script>
+</body>
+</html>

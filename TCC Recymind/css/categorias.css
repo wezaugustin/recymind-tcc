@@ -1,0 +1,16 @@
+/* Página de categorias */
+.grid-3 { display:grid; gap:24px; grid-template-columns:repeat(3,1fr); margin-top:48px; }
+.cat h3 { font-size:18px; font-weight:600; margin-top:16px; }
+.cat p { color:var(--muted-foreground); font-size:14px; margin-top:6px; }
+.cat ul { margin:14px 0 0 18px; color:var(--muted-foreground); font-size:13px; }
+.cat li { margin:4px 0; }
+.cat-icon { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; background:var(--secondary); }
+.c-green{background:color-mix(in srgb,var(--primary) 15%,transparent)}
+.c-leaf{background:color-mix(in srgb,#65a30d 18%,transparent)}
+.c-warn{background:color-mix(in srgb,var(--warning) 18%,transparent)}
+.c-blue{background:color-mix(in srgb,#3b82f6 18%,transparent)}
+.c-teal{background:color-mix(in srgb,#14b8a6 18%,transparent)}
+.c-orange{background:color-mix(in srgb,#f97316 18%,transparent)}
+.cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:40px; }
+@media (max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grid-3{grid-template-columns:1fr}}

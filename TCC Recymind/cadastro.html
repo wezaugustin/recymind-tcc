@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Criar conta – recymind</title>
+  <meta name="description" content="Cadastre-se no recymind e organize seus agendamentos de descarte de resíduos." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <script src="js/tema.js"></script>
+  <script src="js/sessao.js"></script>
+  <link rel="stylesheet" href="css/visual-refresh.css" />
+</head>
+<body>
+  <nav class="navbar"><div class="inner"><a class="brand" href="index.html"><span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-4 16-9 16z"/><path d="M4 21c4-6 8-8 12-9"/></svg></span> recymind</a><div class="nav-links"><a href="index.html">Início</a><a href="categorias.html">Categorias</a><a href="pontos.html">Pontos de coleta</a><button class="icon-btn" type="button" data-tema-toggle aria-label="Alternar tema"></button><a href="login.html" class="btn btn-outline">Entrar</a><a href="cadastro.html" class="btn btn-primary">Criar conta</a></div></div></nav>
+
+  <main class="auth-wrap">
+    <div class="auth-box">
+      <div class="auth-head">
+        <div class="brand"><span class="mark">♻</span> recymind</div>
+        <h1>Criar sua conta</h1>
+        <p>Preencha todos os campos abaixo.</p>
+      </div>
+
+      <p class="required-note">Nome, e-mail válido e senha com no mínimo 6 caracteres são obrigatórios.</p>
+
+      <form action="erro-campos.html" method="get" novalidate data-validar data-sucesso="Cadastro realizado com sucesso!">
+        <div class="form-field">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome" minlength="3" required />
+          <small>Mínimo de 3 caracteres.</small>
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+          <small>Formato nome@dominio.com.</small>
+        </div>
+        <div class="form-field">
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" placeholder="Mínimo 6 caracteres" minlength="6" required />
+          <small>Mínimo de 6 caracteres.</small>
+        </div>
+        <button class="btn btn-primary" type="submit">Criar conta</button>
+      </form>
+
+      <p id="aviso-sucesso" class="aviso-sucesso"></p>
+      <p class="auth-alt">Já tem conta? <a href="login.html">Entrar</a></p>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container inner"><div class="fbrand"><span class="mark">♻</span> recymind</div><p>© 2026 recymind — Guia de descarte consciente para cidadãos.</p></div></footer>
+  <script src="js/aviso.js"></script>
+  <script src="js/validacao.js"></script>
+</body>
+</html>
